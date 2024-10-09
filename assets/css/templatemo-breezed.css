@@ -355,7 +355,7 @@ header
 }
 
 .header-area .main-nav {
-  min-height: 80px;
+  min-height: 50px;
   background: transparent;
 }
 
@@ -1348,7 +1348,7 @@ footer .right-text-content {
 }
 
 footer .right-text-content p {
-  color: #ffc107;
+  color: #ffffff;
   font-size: 14px;
   margin-right: 15px;
   text-transform: uppercase;
@@ -1365,9 +1365,9 @@ footer .right-text-content ul li a {
   text-align: center;
   line-height: 32px;
   font-size: 14px;
-  background-color: #ffc107;
+  background-color: #ffffff;
   border-radius: 50%;
-  color: #ffc107;
+  color: #170ad3;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1376,7 +1376,7 @@ footer .right-text-content ul li a {
 
 footer .right-text-content ul li a:hover {
   background-color: #5858d6;
-  color: #ffc107;
+  color: #ffffff;
 }
 
 @media (max-width: 992px) {
