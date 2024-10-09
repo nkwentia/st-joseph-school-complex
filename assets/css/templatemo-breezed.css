@@ -639,7 +639,7 @@ header
 }
 
 .header-area.header-sticky {
-  min-height: 65px;
+  min-height: 45px;
 }
 
 .header-area.header-sticky .nav {
@@ -683,7 +683,7 @@ header
     padding: 0px;
   }
   .header-area .logo {
-    margin-left: 30px;
+    margin-left: 20px;
   }
   .header-area .menu-trigger {
     display: block !important;
