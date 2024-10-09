@@ -362,10 +362,10 @@ header
 .header-area .main-nav .logo {
   line-height: 25px;
   color: #3b0beb; /* Change the color to black for better visibility on most backgrounds */
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 950;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   float: left;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
