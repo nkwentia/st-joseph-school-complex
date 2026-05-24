@@ -1,62 +1,777 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="St Joseph's Foundation School Complex – Nursery, Primary, Secondary and Technical education in Yaoundé, Cameroon.">
+  <title>ST JOSEPH'S FOUNDATION SCHOOL COMPLEX</title>
 
-<link rel="preload" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"></noscript>
+  <!-- Preconnect to Google Fonts for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-<title>ST JOSEPH FUNDATION SCHOOL</title>
+  <style>
+    /* ── CSS Variables ─────────────────────────────────── */
+    :root {
+      --blue:   #003e7e;
+      --gold:   #c8930a;
+      --light:  #f5f7fa;
+      --white:  #ffffff;
+      --dark:   #111827;
+      --gray:   #6b7280;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
 
-<link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
+    /* ── Reset ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; }
+    a  { color: inherit; text-decoration: none; }
 
-<link rel="preload" href="assets/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="assets/css/font-awesome.css"></noscript>
+    /* ── Announcement Bar ──────────────────────────────── */
+    .announce {
+      background: var(--gold);
+      color: var(--white);
+      font-weight: 700;
+      font-size: .9rem;
+      padding: .45rem 1rem;
+      text-align: center;
+      letter-spacing: .04em;
+    }
 
-<link rel="preload" href="assets/css/templatemo-breezed.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="assets/css/templatemo-breezed.css"></noscript>
+    /* ── Header / Nav ──────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--blue);
+      box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: .75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--white);
+    }
+    .logo-wrap img {
+      height: 52px;
+      width: auto;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .logo-text span { color: var(--gold); }
 
-<link rel="preload" href="assets/css/owl-carousel.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="assets/css/owl-carousel.css"></noscript>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: .25rem;
+      align-items: center;
+    }
+    nav a {
+      color: rgba(255,255,255,.85);
+      font-weight: 600;
+      font-size: .9rem;
+      padding: .45rem .8rem;
+      border-radius: 6px;
+      transition: background .2s, color .2s;
+    }
+    nav a:hover, nav a.active {
+      background: var(--gold);
+      color: var(--white);
+    }
 
-<link rel="preload" href="assets/css/lightbox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="assets/css/lightbox.css"></noscript></head><body><div id="preloader"><div class="jumper"><div></div><div></div><div></div></div></div><header class="header-area header-sticky"><div class="container"><div class="row"><div class="col-12"><nav class="main-nav"><a href="index.html" class="logo"><img src="assets/images/logo.jpg" alt="ST JOSEPH FOUNDATION" width="200" height="80"> ST JOSEPH FOUNDATION</a><ul class="nav"><li class="scroll-to-section"><a href="#top" class="active">Home</a></li><li class="scroll-to-section"><a href="#about">About</a></li><li class="submenu"><a href="#">Our Schools</a><ul><li><a href="nursery.html">Nursery</a></li><li><a href="primary.html">Primary</a></li><li><a href="general.html">ST JAHS</a></li><li><a href="technical.html">ST JATEC</a></li></ul></li><li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li><div class="search-icon"><a href="#search"><i class="fa fa-search"></i></a></div></ul><a class="menu-trigger"><span>Menu</span></a></nav></div></div></div></header><div id="search"><button type="button" class="close">×</button><form id="contact" action="#" method="get"><fieldset><input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content"></fieldset><fieldset><button type="submit" class="main-button">Search</button></fieldset></form></div><div class="main-banner header-text" id="top"><marquee behavior="scroll" direction="left" scrollamount="15"><b>ADMISSION INTO ALL CLASSES IS OPEN</b></marquee><div class="Modern-Slider">
-    <div class="item">
-        <div class="img-fill">
-            <img src="assets/images/family-small.jpg" 
-     srcset="assets/images/family-small.jpg 480w, assets/images/family.jpg 1920w" 
-     sizes="(max-width: 600px) 480px, 1920px" 
-     alt="">
-            <div class="text-content"><h3>Welcome To:</h3><h5>ST JOSEPH FOUNDATION SCHOOL COMPLEX</h5><a href="#" class="main-stroked-button">A place to be</a></div>
+    /* Dropdown */
+    .has-dropdown { position: relative; }
+    .has-dropdown > a::after { content: " ▾"; font-size: .75rem; }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-width: 160px;
+      overflow: hidden;
+    }
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown { display: block; }
+    .dropdown a {
+      display: block;
+      color: var(--dark);
+      padding: .65rem 1.1rem;
+      font-size: .88rem;
+      border-bottom: 1px solid #f0f0f0;
+      border-radius: 0;
+    }
+    .dropdown a:last-child { border-bottom: none; }
+    .dropdown a:hover { background: var(--light); color: var(--blue); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: .3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ── Hero ──────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--blue);
+    }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-slide.active { opacity: 1; }
+    .hero-slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,30,70,.72) 40%, rgba(0,0,0,.35));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--white);
+      padding: 2rem 1.5rem;
+      max-width: 750px;
+      animation: fadeUp .9s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: .6rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      opacity: .9;
+      margin-bottom: 2rem;
+    }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: .8rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+      border: 2px solid transparent;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+    .btn-gold   { background: var(--gold); color: var(--white); }
+    .btn-outline { border-color: var(--white); color: var(--white); background: transparent; }
+
+    /* Slide dots */
+    .hero-dots {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: .5rem;
+    }
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.45);
+      cursor: pointer;
+      transition: background .3s, transform .3s;
+      border: none;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.25); }
+
+    /* ── Section Wrapper ───────────────────────────────── */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .8rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--blue);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    /* ── About ─────────────────────────────────────────── */
+    #about { background: var(--light); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about-text p { color: var(--gray); margin-bottom: 1rem; }
+    .contact-list { list-style: none; margin-top: 1.5rem; }
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      padding: .5rem 0;
+      font-weight: 600;
+      color: var(--dark);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .contact-list li:last-child { border: none; }
+    .contact-list .icon {
+      width: 34px; height: 34px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--white);
+      font-size: 1rem;
+    }
+    .admit-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      padding: .6rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      letter-spacing: .03em;
+    }
+
+    /* ── Schools Cards ─────────────────────────────────── */
+    #schools { background: var(--white); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform .25s, box-shadow .25s;
+      border-top: 4px solid var(--blue);
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .card-icon {
+      font-size: 2.4rem;
+      margin-bottom: .75rem;
+    }
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--blue);
+      font-size: 1.15rem;
+      margin-bottom: .5rem;
+    }
+    .card p { color: var(--gray); font-size: .9rem; }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: .88rem;
+    }
+    .card a:hover { text-decoration: underline; }
+
+    /* ── Foundation / Team ─────────────────────────────── */
+    #foundation { background: var(--blue); color: var(--white); }
+    #foundation .section-title { color: var(--white); }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .team-card { text-align: center; }
+    .team-card img {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 4px solid var(--gold);
+    }
+    .team-card .role {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .team-card h4 { font-size: 1rem; margin-top: .25rem; }
+
+    /* ── Contact ───────────────────────────────────────── */
+    #contact { background: var(--light); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info-box h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--blue);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .contact-info-box p { color: var(--gray); margin-bottom: 1.5rem; }
+    .info-row {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .info-row .icon {
+      width: 38px; height: 38px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .info-row div strong { display: block; font-size: .8rem; color: var(--gray); font-weight: 600; }
+    .info-row div span { font-weight: 700; color: var(--dark); }
+
+    /* Form */
+    .contact-form { background: var(--white); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
+      font-family: 'Nunito', sans-serif;
+      font-size: .95rem;
+      background: var(--light);
+      color: var(--dark);
+      transition: border-color .2s;
+      margin-top: .75rem;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      background: var(--white);
+    }
+    .contact-form textarea { resize: vertical; min-height: 130px; }
+    .contact-form button {
+      margin-top: 1rem;
+      width: 100%;
+      padding: .9rem;
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+      font-family: 'Nunito', sans-serif;
+    }
+    .contact-form button:hover { background: var(--gold); transform: translateY(-1px); }
+    .form-msg { margin-top: .75rem; font-weight: 600; color: green; display: none; }
+
+    /* ── Footer ────────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.7);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: .9rem;
+    }
+    footer strong { color: var(--white); }
+    .social-links { margin: .75rem 0; display: flex; gap: 1rem; justify-content: center; }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      color: var(--white);
+      font-size: 1.1rem;
+      transition: background .2s;
+    }
+    .social-links a:hover { background: var(--gold); }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: var(--blue);
+        padding: 1rem 1.5rem 1.5rem;
+        gap: .25rem;
+      }
+      nav ul.open { display: flex; }
+      .has-dropdown .dropdown {
+        position: static;
+        box-shadow: none;
+        background: rgba(255,255,255,.08);
+        border-radius: 6px;
+        margin-top: .25rem;
+      }
+      .has-dropdown .dropdown a { color: rgba(255,255,255,.85); }
+      .has-dropdown .dropdown a:hover { background: rgba(255,255,255,.15); color: var(--white); }
+      .about-grid  { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row    { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 1.8rem; }
+      section { padding: 3.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announce">📢 ADMISSION INTO ALL CLASSES IS OPEN — Enroll Today!</div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-inner">
+      <a href="#top" class="logo-wrap">
+        <img src="assets/images/logo.jpg" alt="St Joseph's Foundation School Complex logo" width="52" height="52">
+        <div class="logo-text">ST JOSEPH'S <span>FOUNDATION</span><br>School Complex</div>
+      </a>
+
+      <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul id="navList">
+          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="has-dropdown">
+            <a href="#schools">Our Schools</a>
+            <ul class="dropdown">
+              <li><a href="nursery.html">Nursery</a></li>
+              <li><a href="primary.html">Primary</a></li>
+              <li><a href="general.html">ST JAHS</a></li>
+              <li><a href="technical.html">ST JATEC</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide active" style="background-image:url('assets/images/family.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/images/first.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/images/mama.jpg')"></div>
+    </div>
+
+    <div class="hero-content">
+      <h1>Welcome to St Joseph's Foundation School Complex</h1>
+      <p>Nurturing Excellence from Nursery to Technical High School in Yaoundé, Cameroon</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-gold">Enroll Now</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+
+    <div class="hero-dots" id="heroDots">
+      <button class="dot active" data-i="0" aria-label="Slide 1"></button>
+      <button class="dot" data-i="1" aria-label="Slide 2"></button>
+      <button class="dot" data-i="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About Us</p>
+          <h2 class="section-title">Welcome to St Joseph's Foundation School Complex</h2>
+          <span class="admit-badge">🎓 Admission is Open – All Schools</span>
+          <ul class="contact-list">
+            <li>
+              <span class="icon">📞</span>
+              +237 676 391 713
+            </li>
+            <li>
+              <span class="icon">📞</span>
+              +237 650 780 578
+            </li>
+            <li>
+              <span class="icon">✉️</span>
+              stjosephschoolcomplex@gmail.com
+            </li>
+          </ul>
         </div>
-    </div>
-    <div class="item">
-        <div class="img-fill">
-            <img src="assets/images/first.jpg" alt="" loading="lazy" width="1920" height="1080">
-            <div class="text-content"><h3>WE ARE THE:</h3><h5>Best in Yaounde IV</h5>
-            </div>
+        <div>
+          <p>St Joseph's Foundation School Complex is an independent, non-partisan day school serving boys and girls from age 2 to 18. It is made up of four schools under one roof:</p>
+          <p>The <strong>Bilingual Nursery and Primary School</strong> was established in 2007. The <strong>Anglo-Saxon Secondary School (St JASS)</strong> opened in 2012 at parents' request to champion English-medium education. The <strong>Anglo-Saxon Technical High School (ST JATEC)</strong>, established in 2015, trains students in practical vocational skills to become self-reliant.</p>
+          <p>Today, St Joseph's ranks among the best schools in the region, offering a unique continuous education pathway from Nursery all the way through Technical High School — and recording outstanding CAP exam results.</p>
         </div>
+      </div>
     </div>
-    <div class="item">
-        <div class="img-fill">
-            <img src="assets/images/mama.jpg" alt="" loading="lazy" width="1920" height="1080">
-            <div class="text-content"><h3>We offer:</h3><h5>Technical Education</h5><a href="#" class="main-filled-button">Enroll Now</a></div>
+  </section>
+
+  <!-- Our Schools -->
+  <section id="schools">
+    <div class="container">
+      <p class="section-label">Our Schools</p>
+      <h2 class="section-title">One Complex, Four Great Schools</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>Nursery School</h3>
+          <p>Early childhood education in a warm, bilingual environment for children aged 2–5.</p>
+          <a href="nursery.html">Visit →</a>
         </div>
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Primary School</h3>
+          <p>Building strong academic foundations for pupils from Class 1 to Class 6.</p>
+          <a href="primary.html">Visit →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏫</div>
+          <h3>ST JAHS</h3>
+          <p>Anglo-Saxon General Secondary School offering Form 1 through Upper Sixth.</p>
+          <a href="general.html">Visit →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔧</div>
+          <h3>ST JATEC</h3>
+          <p>Technical High School training students for skilled trades and self-employment.</p>
+          <a href="technical.html">Visit →</a>
+        </div>
+      </div>
     </div>
-</div></div><div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div><section class="section" id="about"><div class="container"><div class="row"><div class="col-lg-6 col-md-6 col-xs-12"><div class="left-text-content"><div class="section-heading"><h6>About Us</h6><h2>WELCOME TO THE St JOSEPH’S FOUNDATION SCHOOL COMPLEX</h2></div><br><div class="section-heading"><h1>ADMISSION IS OPEN</h1><h2>INTO ALL OUR SCHOOLS</h2></div><ul class="contact-info"><li><img src="assets/images/contact-info-01.png" alt="" width="24" height="24">+237 676391713</li><br>
-    <li><img src="assets/images/contact-info-01.png" alt="">+237 6 50 78 05 78</li><br><li><img src="assets/images/contact-info-02.png" alt="">stjosephschoolcomplex@gmail.com</li><br></ul></div></div><div class="col-lg-6 col-md-6 col-xs-12"><div class="right-text-content"><p>Thank you so much for your wonderful and exciting interest in the St Joseph’s Foundation School Complex and for giving us this opportunity to share a clue of it with you. St Joseph’s Foundation School Complex has been an independent and non-partisan day school from its inception and is made up of an agglomeration of schools for boys and girls from 2 years to 18 years which are: St Joseph’s Foundation Bilingual Nursery and Primary School created in 2007. St Joseph’s Foundation Anglo-saxon Secondary School [St JASS] was opened in 2012 at the parents' request who cherished the English speaking subsystem of education in Cameroon. St Joseph’s Foundation Anglo-saxon TECHNICAL HIGH school was established in 2015 which brought great relief to parents for they now found an English vocational school where their children would be trained to be self-employed without having to rely on government white-collar jobs which were never forth available. Today St Joseph’s Foundation school complex ranks one of the best in the region with its unique setting of continuous and progressive system of education from Nursery, Primary, grammar and technical high schools that befits the needs of the society. The technical school from its very beginning has been a blessing and a wonderful innovation to the school and today had one of the best results for the CAP (Certificat d'Aptitude Professionelle) exams 2019 in the industrial section.</p></div></div></div></div></section><section class="section" id="testimonials"><div class="container"><div class="row"><div class="col-lg-12"><div class="section-heading"><h6>THE</h6><h2>FOUNDATION</h2></div></div><div class="col-lg-12 col-lg-12 col-lg-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"><div class="owl-carousel owl-theme">
-    <div class="item author-item">
-        <div class="member-thumb"><img src="assets/images/pa.jpg" alt="" loading="lazy"></div>
-        <h4>FOUNDER</h4><span>Honorable Joseph Mbah Ndam</span>
+  </section>
+
+  <!-- Foundation / Team -->
+  <section id="foundation">
+    <div class="container">
+      <p class="section-label" style="color:var(--gold)">The Foundation</p>
+      <h2 class="section-title">Our Leadership</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="assets/images/pa.jpg" alt="Honorable Joseph Mbah Ndam – Founder" loading="lazy">
+          <p class="role">Founder</p>
+          <h4>Honorable Joseph Mbah Ndam</h4>
+        </div>
+        <div class="team-card">
+          <img src="assets/images/funder.jpg" alt="Madam Margaret Mbah-Ndam – Founder" loading="lazy">
+          <p class="role">Founder</p>
+          <h4>Madam Margaret Mbah-Ndam</h4>
+        </div>
+        <div class="team-card">
+          <img src="assets/images/ceo.jpg" alt="Mr Tenyah Joseph Junior Mbah-Ndam – CEO" loading="lazy">
+          <p class="role">CEO</p>
+          <h4>Mr Tenyah Joseph Junior Mbah-Ndam</h4>
+        </div>
+      </div>
     </div>
-    <div class="item author-item">
-        <div class="member-thumb"><img src="assets/images/funder.jpg" alt="" loading="lazy" width="300" height="300"></div>
-        <h4>FOUNDER</h4><span>Madam Margaret Mbah-Ndam</span>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact Us</p>
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info-box">
+          <h3>We'd love to hear from you!</h3>
+          <p>Whether you want to enroll your child, get information, or just say hello — reach out anytime.</p>
+          <div class="info-row">
+            <span class="icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <span>+237 676 391 713</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <span>+237 650 780 578</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <span>stjosephschoolcomplex@gmail.com</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon">📍</span>
+            <div>
+              <strong>Location</strong>
+              <span>Yaoundé IV, Cameroon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <input type="text"  name="name"    placeholder="Your Name *"  required>
+              <input type="text"  name="phone"   placeholder="Phone Number" >
+            </div>
+            <div class="form-row">
+              <input type="email" name="email"   placeholder="Email Address *" required>
+              <input type="text"  name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" placeholder="Your Message *" required></textarea>
+            <button type="submit">Send Message →</button>
+            <p class="form-msg" id="formMsg">✅ Message sent! We'll reply soon.</p>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="item author-item">
-        <div class="member-thumb"><img src="assets/images/ceo.jpg" alt="" loading="lazy" width="300" height="300"></div>
-        <h4>CEO</h4><span>Mr Tenyah Joseph Junior Mbah-Ndam</span>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <strong>ST JOSEPH'S FOUNDATION SCHOOL COMPLEX</strong> — Ezazou, Yaoundé IV, Cameroon
+    <div class="social-links">
+      <a href="https://www.facebook.com/SAINTJASS" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://whatsapp.com/channel/0029VafdRcgKmCPIP3nlDC1Q" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </a>
     </div>
-</div></div></div></div></section><section class="section" id="contact-us"><div class="container"><div class="row"><div class="col-lg-4 col-md-4 col-xs-12"><div class="left-text-content"><div class="section-heading"><h6>Contact Us</h6><h2>Feel free to keep in touch with us!</h2></div><ul class="contact-info"><li><li><img src="assets/images/contact-info-01.png" alt="">+237 676391713</li><br>
-    <li><img src="assets/images/contact-info-01.png" alt="">+237 6 50 78 05 78</li><br><li><img src="assets/images/contact-info-02.png" alt="">stjosephschoolcomplex@gmail.com</li></ul></div></div><div class="col-lg-8 col-md-8 col-xs-12"><div class="contact-form"><form id="contact" action="https://formspree.io/f/**YOUR_FORM_ID**" method="POST"><div class="row"><div class="col-md-6 col-sm-12"><fieldset><input name="name" type="text" id="name" placeholder="Your Name *" required=""></fieldset></div><div class="col-md-6 col-sm-12"><fieldset><input name="phone" type="text" id="phone" placeholder="Your Phone" required=""></fieldset></div><div class="col-md-6 col-sm-12"><fieldset><input name="email" type="email" id="email" placeholder="Your Email *" required=""></fieldset></div><div class="col-md-6 col-sm-12"><fieldset><input name="subject" type="text" id="subject" placeholder="Subject"></fieldset></div><div class="col-lg-12"><fieldset><textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea></fieldset></div><div class="col-lg-12"><fieldset><button type="submit" id="form-submit" class="main-button-icon">Send Message Now<i class="fa fa-arrow-right"></i></button></fieldset></div></div></form></div></div></div></div></section><footer><div class="container"><div class="row"><div class="col-lg-6 col-xs-12"><div class="left-text-content"><p>Copyright &copy; JOSEPH FOUNDATION - SCHOOL<a rel="nofollow noopener" href="https://templatemo.com">COMPLEX EZAZOU</a></p></div></div><div class="col-lg-6 col-xs-12"><div class="right-text-content"><ul class="social-icons"><li><p>Follow Us</p></li><li><a rel="nofollow" href="https://www.facebook.com/SAINTJASS"><i class="fa fa-facebook"></i></a></li><li><a rel="nofollow" href="https://whatsapp.com/channel/0029VafdRcgKmCPIP3nlDC1Q"><i class="fa fa-whatsapp"></i></a></li><li><a rel="nofollow" href="##"><i class="fa fa-dribbble"></i></a></li></ul></div></div></div></div></footer><script src="assets/js/jquery-2.1.0.min.js"></script><script src="assets/js/popper.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/owl-carousel.js"></script><script src="assets/js/scrollreveal.min.js"></script><script src="assets/js/waypoints.min.js"></script><script src="assets/js/jquery.counterup.min.js"></script><script src="assets/js/imgfix.min.js"></script><script src="assets/js/slick.js"></script><script src="assets/js/lightbox.js"></script><script src="assets/js/isotope.js"></script><script src="assets/js/custom.js"></script><script>$(function(){var o="";$("p").click(function(){o=$(this).attr("data-rel"),$("#portfolio").fadeTo(50,.1),$("#portfolio div").not("."+o).fadeOut(),setTimeout(function(){$("."+o).fadeIn(),$("#portfolio").fadeTo(50,1)},500)})})</script></body></html>
+    <p>&copy; 2025 St Joseph's Foundation School Complex. All rights reserved.</p>
+  </footer>
+
+  <!-- ── JavaScript (no jQuery, no libraries) ─────────── -->
+  <script>
+    // Hamburger menu
+    const btn     = document.getElementById('menuBtn');
+    const navList = document.getElementById('navList');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      navList.classList.toggle('open');
+    });
+    // Close on link click
+    navList.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        btn.classList.remove('open');
+        navList.classList.remove('open');
+      });
+    });
+
+    // Hero slideshow
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots   = document.querySelectorAll('.dot');
+    let current  = 0, timer;
+
+    function goTo(i) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    function next() { goTo(current + 1); }
+
+    timer = setInterval(next, 4500);
+    dots.forEach(d => d.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(+d.dataset.i);
+      timer = setInterval(next, 4500);
+    }));
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], div[id="top"]');
+    const navLinks  = document.querySelectorAll('nav a');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`nav a[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+
+    // Contact form – basic client-side feedback
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      // Let Formspree handle it, just show message after short delay
+      const msg = document.getElementById('formMsg');
+      setTimeout(() => { msg.style.display = 'block'; }, 800);
+    });
+  </script>
+</body>
+</html>
