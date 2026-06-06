@@ -162,14 +162,22 @@
       overflow: hidden;
       background: var(--blue);
     }
-    .hero-slides { position: absolute; inset: 0; }
+    .hero-slides { 
+      position: absolute; 
+      inset: 0; 
+      width: 100%;
+      height: 100%;
+    }
     .hero-slide {
       position: absolute;
       inset: 0;
+      width: 100%;
+      height: 100%;
       opacity: 0;
       transition: opacity 1s ease;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
     .hero-slide.active { opacity: 1; }
     .hero-slide::after {
@@ -714,7 +722,7 @@
     <p>&copy; 2025 St Joseph's Foundation School Complex. All rights reserved.</p>
   </footer>
 
-  <!-- ── JavaScript (no jQuery, no libraries) ─────────── -->
+  <!-- ── JavaScript ───────────────────────────────────── -->
   <script>
     // Hamburger menu
     const btn     = document.getElementById('menuBtn');
@@ -737,6 +745,7 @@
     let current  = 0, timer;
 
     function goTo(i) {
+      if(slides.length === 0) return;
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
       current = (i + slides.length) % slides.length;
@@ -745,15 +754,17 @@
     }
     function next() { goTo(current + 1); }
 
-    timer = setInterval(next, 4500);
-    dots.forEach(d => d.addEventListener('click', () => {
-      clearInterval(timer);
-      goTo(+d.dataset.i);
+    if(slides.length > 0) {
       timer = setInterval(next, 4500);
-    }));
+      dots.forEach(d => d.addEventListener('click', () => {
+        clearInterval(timer);
+        goTo(+d.dataset.i);
+        timer = setInterval(next, 4500);
+      }));
+    }
 
     // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id], div[id="top"]');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks  = document.querySelectorAll('nav a');
     const observer  = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -763,12 +774,11 @@
           if (active) active.classList.add('active');
         }
       });
-    }, { threshold: 0.4 });
-    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+    }, { threshold: 0.2 });
+    sections.forEach(s => observer.observe(s));
 
     // Contact form – basic client-side feedback
     document.getElementById('contactForm').addEventListener('submit', function(e) {
-      // Let Formspree handle it, just show message after short delay
       const msg = document.getElementById('formMsg');
       setTimeout(() => { msg.style.display = 'block'; }, 800);
     });
